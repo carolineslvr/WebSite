@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?familu=Poppins:wght@100;200;300;400;500;600;');
+
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    -webkit-box-sizing: border-box; 
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+  }
+  body{
+    min-height: 100vh;
+    background: url(fundo.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .barra{
+    background:rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    position: fixed;
+    width: 290px;
+    height: 100vh;
+    top: 0;
+    left: -100%;
+    overflow-y: auto;
+    transition: 0.6s ease;
+    transition-property: left;
+  }
+  .barra.active{
+    left: 0;
+  }
+  .barra h4{
+    margin-top: 20px;
+  }
+  .barra .menu{
+    width: 100%;
+    margin-top: 40px;
+  }
+  .barra .menu .item{
+   position: relative;
+   cursor: pointer;
+  }
+
+  .barra .menu .item a{
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 50px;
+  }
+
+  .barra .menu .item a:hover{
+    background: #040B60;
+    transition: 0.3s ease;
+  }
+
+  .barra .menu .item i{
+    margin-right: 15px;
+  }
+  
+  .barra .menu .item a .dropdown{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+  }
+  .barra .menu .item .submenu{
+    background: rgba(255, 255, 255, 0.1);
+    display: none;
+  }
+  .barra .menu .item .submenu a{
+    padding-left: 80px;
+  }
+  .rotate{
+    transform: rotate(90deg) ;
+  }
+  .close-btn{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    right: 0;
+    margin: 25px;
+    cursor: pointer;
+  }
+  .btn-abrir{
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    margin: 25px;
+    cursor: pointer;
+  }
+  .principal{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+  }
+  .principal h1{
+    color: #fff;
+    font-size: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    line-height: 80px;
+  }
+  @media (max-width: 900px){
+    .principal h1{
+        font-size: 40px;
+        line-height: 60px;
+    }
+  }
+  p{ 
+    color: #fff;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px;
+  }
+  .conteudo{
+    width: 80%;
+    color: #fff;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 30px;
+    margin-top: auto;
+    margin-bottom: 50px;
+
+  }
+  .titulo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .subtitulo{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #tabelaseletor{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+  }
+.boxmodeldentro {                               
+    margin: 300px;
+    margin-top: 50px;
+    width: auto;
+    height: 600px;
+    background: rgb(248, 248, 248);
+    border: 5px;
+    border-color: rgb(7, 46, 117);
+    border-style: solid;
+    flex-direction: column;
+    color: #040B60;
+    align-items: center;
+    justify-content: center;
+}
+#form{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #020202;
+  font-size: 15px;
+}
+
+  

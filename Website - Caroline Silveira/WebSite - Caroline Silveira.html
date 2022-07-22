@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Trabalho avaliativo - Caroline Silveira</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+      <link rel="stylesheet" href="style.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+      <div class="btn-abrir">
+        <i class=" fas fa-bars"><b> MENU </b></i>
+      </div>
+      <nav class="barra">
+        <div class="close-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <h4><center>Índice</center></h4>
+        <div class="menu">
+          <div class="item"><a href="#intro"><i class="fas fa-globe"></i>O que é a jQuery?</a></div>
+          <div class="item"><a href="#sintaxe"><i class="fas fa-language"></i>Sintaxe</a></div>
+          <div class="item">
+            <a  class="sub-btn"><i class="fas fa-gear"></i>Principais comandos e exemplos<i class="fas fa-angle-right dropdown"></i></a>
+            <div class="submenu">
+              <div class="subitem">
+                <a href="#comando1" class="subitem">Funções gerais</a>
+              </div>
+              <div class="subitem"> 
+                <a href="#comando2" class="subitem">Variáveis</a>
+              </div>
+              <div class="subitem">
+                <a href="#comando3" class="subitem">Efeitos</a>
+              </div>
+            </div>
+            <div class="item"><a href="#referencias"><i class="fas fa-book"></i>Referências</a></div>
+            <div class="item"><a href="#form"><i class="fas fa-comments"></i>Deixe seu comentário</a></div>
+            <div class="item"><a href="#inicio"><i class="fas fa-desktop"></i>Retornar a página Inicial</a></div>
+          </div>
+        </div>
+      </nav>
+      <section class="principal" id="inicio">
+        <h1>Conheça a biblioteca<br>jQuery<br>
+          Veja as opções no menu ao lado
+        </h1>
+      </section>
+      <div class="conteudo">
+        <div class="texto" id="intro">
+          <h2 class="titulo">O que é a jQuery? </h2>
+          <h4 class="subtitulo"><u>HISTÓRIA:</u></h4>
+          <p>jQuery é uma biblioteca de funções em JavaScript, que interage com o HTML e tem como objetivo facilitar o 
+            uso de determinados recursos dessa linguagem de programação. Capaz de adicionar dinamismo e interatividade às páginas da web, 
+            ela torna mais simples a criação de animações, efeitos e manipulação de eventos. </p>
+            <p>A jQuery é uma biblioteca multi-plataforma, ou seja, compatível com qualquer navegador de internet. Seus principais objetivos 
+            são, entre outros, a redução do código JavaScript, utilização de plug-ins prontos de diversos desenvolvedores encontrados na web e 
+            resolução de alguns problemas de incompatibilidade entre browseres.</p>
+            <p>Essa biblioteca foi criada em 2006 pelo desenvolvedor americano John Resig, membro da Mozilla Corporation e graduado em Ciência 
+            da Computação pelo Rochester Institute of Technology, que tinha como objetivo elaborar códigos com foco na simplicidade e em 
+            resolver os problemas de incompatibilidade do JavaScript nos navegadores. Atualmente a jQuery, que tem como lema  “Write less, do 
+            more” (escreva menos, faça mais), é a mais popular das bibliotecas JavaScript, sendo utilizada por cerca de 77% dos 10 mil sites 
+            mais visitados do mundo.</p>
+            <h3 class="subtitulo"><u>COMO UTILIZAR:</u></h3>
+            <p>A jQuery é simplesmente um arquivo em Javascript (.js) e para utilizá-la basta anexar o arquivo no código da página em que será 
+            aplicado, conforme exemplo:</p>
+            <p>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"&gt;&lt;/script&gt;</p>
+            <p>Este arquivo pode ser instalado no seu HD através do <a href="https://jquery.com/" target="_blank">site oficial</a> da biblioteca,
+            ou ser carregado a partir de um arquivo remoto público disponibilizado pela Google, Microsoft ou jQuery.</p>
+        </div>
+        <div class="texto" id="sintaxe">
+          <h2 class="titulo">Sintaxe</h2>
+          <p>Ao interagir com o HTML, a jQuery consegue selecionar os os elementos no DOM (sigla em inglês para Document Object Model, 
+          que significa modelo de documento por objetos) que serão manipulados de forma direta. Basicamente, o DOM representa o modo como 
+          as tags em HTML, XHTML e XML serão organizadas e lidas pelo browser.</p>
+          <p>Visto isso, pode-se dizer que a sintaxe da jQuery é bem específica e prática. Ela é basicamente formada pelos elementos 
+          <u>$.(seletor).(ação)</u>, de modo que:</p>
+          <p><u>$</u>: operador jQuery.</p>
+          <p><u>seletor</u>: Elemento HTML a ser manipulado.</p>
+          <p><u>ação</u>: Função a ser executada pela jQuery com o elemento selecionado.</p>
+          <p>Entre os principais seletores utilizados pela jQuery estão:</p>
+          <table div="centro" id="tabelaseletor" border="1">
+              <tr>
+                <th scope="col">Sintaxe</th>
+                <th scope="col">Explicação</th>                    
+              </tr> 
+            <tbody id="corpoTabela"></tbody>
+          </table>            
+        </div>
+        <div class="texto" id="comando1">
+          <h2 class="titulo">Funções gerais</h2>
+          <p> Como dito anteriormente, através do comando $.(seletor).(ação) a jQuery consegue exercer diversas ações a partir do elemento
+          selecionado. Esses comandos, também chamados de funções, basicamente representam o exato momento que uma determinada ação do usuário 
+          ocorre, sua sintaxe consiste praticamente em <u>$(elemento).ação(function(){evento})</u>. Veja abaixo algumas dessas funções:</p>
+          <p><u>Ready</u>: é executada quando todos os elementos já estiverem sido carregados.</p>
+          <p><u>Click</u>: é executada quando se aplica um clique com o botão do mouse sobre o elemento.</p> 
+          <p><u>Mousedown e mouseup</u>: enquanto a função mousedown é executada quando o botão do mouse está pressionado, a função mouseup é
+          disparada quando o botão do mouse é liberado do pressionamento.</p>
+          <p><u>Mouseenter e mouseleave</u>: a função mouseenter é realizada quando se posiciona o cursor do mouse sobre o elemento, já a função
+          mouseleave é realizada quando o mouse sai de cima do elemento.</p>
+          <p><u>Keypress</u>: função disparada quando pressionamos uma tecla do teclado.</p>
+          <p><u>Sumbit</u>: executada quando o formulário é submetido.</p>
+          <p><u>Change</u>: realizada quando um elemento de formulário tem seu valor alterado.</p>
+        </div>
+        <div class="texto" id="comando2">
+          <h2 class="titulo">Variáveis</h2>
+          <p>Variável é o local onde serão armazenados valores ou conteúdos que serão utlizados como parte de alguma função ou operação executada
+          através da jQuery. A variáveis podem conter praticamente qualquer coisa, como dados complexos e funções completas, tornando possível
+          executar os mais variados comandos.</p>
+          <p>Ao utilizarmos o JavaScript, que é uma linguagem francamente tipada e, consequentemente a jQuery, não precisamos declarar o tipo 
+          da variável que estamos contruindo, uma vez que a própria linguagem já faz essa identificação. A sintaxe de uma declaração de variável
+          consiste em: <u>var a = numeroX</u>. É importante lembrar que como JavaScript é uma linguagem case-sensitive, caracteres maiúsculos e 
+          minúsculos fazem diferença na leitura do código.</p>
+          <h3 class="subtitulo"><u>VALOR DE UMA VARIÁVEL:</u></h3>
+          <p>Alguns métodos tornam possível encontrar o valor de uma variável no documento HTML. Como por exemplo: </p>
+          <p><u>var X = document.getElementById(id).value</u>: Retorna o valor da variável através do seu ID.</p>
+          <p><u>var X = document.getElementsByClassName(nomedaclass)</u>: Retorna o valor da variável um vetor de objetos com todos os elementos 
+          que possuem o nome da classe citada.</p>
+          <p><u>string.substring()</u>: Atribui parte da string (sequência especial de caracteres) entre os índices inicial e final, ou até o final da string.</p>
+          <p><u>string.lenght()</u>: Lê todo ocomprimento da string. É uma propriedade read-only (somente leitura).</p>
+          <p><u>str.indexOf(searchValue)</u>: procura determinado valor dentro de uma string.</p>
+          <p><u>parseInt</u> e <u>parseFloat</u>: são utilizados quando é necessário analisar uma string e, se
+          possível, converter e retornar um número do tipo inteiro (parseInt) ou do tipo real (parseFloat).</p>
+          <p>Veja <a href="calculadorainterativa.html" target="_blank">AQUI</a>um exemplo de calculadora interativa, formada com o uso de variáveis e métodos de 
+          leituras de strings.</p>
+        </div>
+        <div class="texto" id="comando3">
+          <h2 class="titulo">Efeitos</h2>
+          <p>A biblioteca jQuery possui vários métodos geralmente utilizados para adicionar animações personalizadas para uma página da web. 
+          Veja a seguir alguns desses efeitos:</p>
+          <p><u>Hide/show</u>: Este efeito oculta (hide) os elementos, caso estejam visíveis e mostra (show), caso estejam ocultos.</p>
+          <p><u>Animate</u>: Este efeito usa as propriedades CSS para gerar as animações, gerando um vasto número de possibilidades. 
+          Sua sintaxe padrão é: <u>$(seletor).animate({estilos CSS})</u></p>
+          <p><u>FadeIn/fadeOut</u>: Oculta (fadeOut) ou mostra (fadeIn) os elementos gradativamente.</p>
+          <p><u>SlideUp e slideDown</u>: Esse efeito mostra e oculta respectivamente os elementos em um efeito deslizante, para cima e para baixo.</p>
+          <p>Veja a seguir um exemplo de programaçaõ utilizando o efeito Hide/Show e a função Clcik:</p>
+          <button id="botao1" style="color: black;">Mostrar</button>
+          <button id="botao2" style="color: black;">Ocultar</button><br><br>
+          <div id="imagem"> <img src="tecnologia.png" alt="Imagem exemplo." width="500"></div>
+        </div>
+        <div class="texto" id="referencias">
+          <h2 class="titulo">Referências Bibliográficas</h2>
+          <p>GABRIEL. Conhecendo a biblioteca jQuery. Disponível em: https://www.devmedia.com.br/conhecendo-a-biblioteca-jquery/22778. 
+          Acesso em: 04 jul. 2022.</p>
+          <p>JOSÉ. JQuery Tutorial. Disponível em: https://www.devmedia.com.br/jquery-tutorial/27299. Acesso em: 04 jul. 2022.</p>
+          <p>DESCONHECIDO. Pausa para a história: como John criou o jQuery? Disponível em: https://pt.khanacademy.org/computing/computer-programming/html-js-jquery/jquery-dom-access/a/history-of-jquery#:~:text=Em%202006%2C%20John%20Resig%20era,resolver%20o%20problema%3A%20o%20jQuery.
+          .Acesso em: 03 jul. 2022.</p>
+          <p>BRUNO, Professor. Apostila jQuery. 1.0 [S.I]: Cfb Cursos, 2016. 75 p. Disponível em: https://cfbcursos.com.br/apostilas-cfb-cursos/. 
+          Acesso em: 05 jul. 2022</p>
+          <p>DESCONHECIDO. JavaScript: tutoriais. Tutoriais. Disponível em: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript. 
+          Acesso em: 02 jul. 2022.</p>
+          <p>DESCONHECIDO. JQuery Tutorial. Disponível em: https://www.w3schools.com/jquery/. Acesso em: 03 jul. 2022.</p>
+          <p> HARWANI, Bintu. JQuery Basics. In: HARWANI, Bintu. <u>JQuery Recipes</u>. Berkeley: Apress, 2022. p. 1-50.</p>
+          <p>SILVA, Mauricio Samy. <u>JQuery</u> a biblioteca do programador javascript. 3. ed. São Paulo: Novatec, 2014.</p>
+        </div>
+        <div class="texto" id="form">
+          <h2 class="titulo">Deixe seu comentário</h2>
+          <div class="boxmodeldentro">
+            <form method="get" id="formulario">
+              <p><label for="nome" style="font-size: 15px; color: black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Informe seu nome completo:</label><br>
+              <input type="text" id="nome" name="nome" style="color: black;" required></p>
+              <p><label for="cpf" style="font-size: 15px; color: black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Informe seu CPF:</label><br>
+              <input id="cpf" name="cpf" type="tel"style="color: black;" pattern="[0-9]{3}[0-9]{3}[0-9]{3}[0-9]{2}" size="50" required></p>
+              <p><label for="email" style="font-size: 15px; color: black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Informe seu e-mail:</label><br>
+              <input type="email" id="email" name="email" style="color: black;" required></p>
+              <p><label for="cel" style="font-size: 15px; color: black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Informe seu número de celular:</label><br>
+              <input id="cel" name="cel" type="tel" style="color: black;" pattern="[0-9]{11}" required></p>
+              <p><label for="comentario" style="font-size: 15px; color: black; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Insira seu comentário:</label><br>
+              <textarea id="comentario" rows="10" cols="40" maxlength="500" style="color: black;" required></textarea></p>                  
+              <p><input type="reset" style="color: black; float: left;" value="Limpar campos">
+              <input type="submit" id="benviar" style="color: black; float: right;" value="Enviar"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+  </body>
+    
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+
+        $('.texto').hide();
+
+        $('div.item').click(function(){
+          $('.texto').hide();
+        });
+
+        $('div .submenu').click(function(){
+            $('.texto').hide();
+        });
+
+        $('.subitem').click(function(){
+          $('.texto').hide();
+        });
+
+        $('div.item').click(function(){
+          $('div.item').removeClass('active')
+          $(this).addClass('active')
+          $('.principal').hide()
+          $('texto').hide()
+          var mostrar = $(this).find("a").attr("href")
+          $(mostrar).fadeIn('slow')
+          return false
+        });
+
+        $('div.submenu').click(function(){
+          $('div.submenu').removeClass('active')
+          $(this).addClass('active')
+          $('.principal').hide()
+          $('texto').hide()
+          var mostrar = $(this).find("a").attr("href")
+          $(mostrar).fadeIn('slow')
+          return false
+        });
+
+        $('div.subitem').click(function(){
+          $('div.subitem').removeClass('active')
+          $(this).addClass('active')
+          $('.principal').hide()
+          $('texto').hide()
+          var mostrar = $(this).find("a").attr("href")
+          $(mostrar).fadeIn('slow')
+          return false
+        });
+
+        $('.sub-btn').click(function(){
+          $(this).next('.submenu').slideToggle();
+          $(this).find('.dropdown').toggleClass('rotate');
+        });
+
+        $('.btn-abrir').click(function(){
+          $('.barra').addClass('active');
+          $('.btn-abrir').css("visibility", "hidden");
+        });
+
+        $('.close-btn').click(function(){
+          $('.barra').removeClass('active');
+          $('.btn-abrir').css("visibility", "visible");
+        });
+        var dados = [{sintaxe: "$('*')", funcao: "Seleciona todos os elementos"}, 
+        {sintaxe: "$(this)",  funcao: "Seleciona o elemento atual"}, 
+        {sintaxe: "$('input:text')", funcao: "Seleciona todos os elementos &lt;input&gt; que são do tipo text"},
+        {sintaxe: "$('button')", funcao: "Seleciona todos os elementos &lt;button&gt; e &lt;input&gt; do tipo button"},
+        {sintaxe: "$('div p')", funcao: "Seleciona todos os elementos p que são descendentes de um elemento <div>"}];
+
+
+            var tabela = document.getElementById("tabelaseletor");
+
+            for(var i=0; i < dados.length; i++){
+            
+                var linha = tabela.insertRow(tabela.rows.length);
+                var celula0 = linha.insertCell(0);
+                celula0.innerHTML = dados[i].sintaxe;
+
+                var celula1 = linha.insertCell(1); 
+                celula1.innerHTML = dados[i].funcao;
+            }
+          $("#botao1").click(function(){
+            $("#imagem").show();
+          });
+          $("#botao2").click(function(){
+            $("#imagem").hide();
+          });
+          $("#benviar").click(function(){
+            
+            if (document.getElementById("nome").value.trim().length > 0 &&
+            document.getElementById("cpf").value.trim().length > 0 &&
+            document.getElementById("email").value.trim().length > 0 &&
+            document.getElementById("cel").value.trim().length > 0 &&
+            document.getElementById("comentario").value.trim().length > 0
+            ){
+              alert("Comentário enviado com sucesso.");
+            } else {
+              alert("Atencão! Para enviar seu comentário, preencha corretamente todos os campos do formulário.");
+            }          
+          });
+        });
+    </script>     
+  </body>
+</html>
